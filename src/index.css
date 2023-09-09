@@ -7,10 +7,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body{
-  background-color: #f2f2f2;
+  background-color: #40189d;
 }
 
 .hide-links {
@@ -21,7 +22,7 @@ body{
   background-color: #40189d;
   height: 100vh;
   width: 270px;
-  transition: width 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hide__sidebar{
@@ -31,33 +32,42 @@ body{
   left: 0;
   height: 100vh;
   width: 78px;
+  transition: all 0.3s ease;
 }
 
 .burger_icon{
   color: #40189d;
 }
 
-.nav{
+.nav, .nav_bg{
   z-index: 10;
   position: fixed;
   right: 0;
   top: 0;
-  width: calc(100% - 270px);
   height: 80px;
+}
+
+/* .nav{
+  width: calc(100% - 270px);
   background-color: #40189d;
 }
+
+.nav_bg{
+  width: calc(100% - 78px);
+  background-color: #40189d;
+} */
 
 .navbar{
   border-radius: 15px 0 0 0;
   width: calc(100% - 270px);
   height: 80px;
   background-color: #f2f2f2;
-  transition: width 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navbar_show{
   width: calc(100% - 78px);
-  transition: width 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 li{
@@ -73,7 +83,8 @@ li{
   width: calc(100% - 270px); 
   height: calc(100% - 80px);
   background-color: #f2f2f2;
-  transition: width 0.3s ease;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
 }
 
 .content1{
@@ -84,19 +95,20 @@ li{
   width: calc(100% - 78px); 
   height: calc(100% - 80px);
   background-color: #f2f2f2;
-  transition: width 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.card div{
-  width: calc((100% - 60px) / 2);
+.card_interviews, 
+.card_apply, 
+.card_profile, 
+.card_message{
   height: 110px;
   border-radius: 10px;
-  margin: 0 15px 30px 15px;
-  color: #fff;
 }
 
 .icon{
   border: 1px solid #fff;
+  color: #fff;
   border-radius: 10px;
   font-size: 15px;
   padding: 8px;
@@ -117,4 +129,15 @@ li{
 .card_message{
   background-color: #8bc740
 }
+
+.error_page{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #dfdbe9;
+  width: 100vw;
+  height: 100vh;
+}
+
 

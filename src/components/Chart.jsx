@@ -57,7 +57,7 @@ const data = [
 
 export default function Chart() {
   return (
-    <div className="bg-white p-5 w-fit">
+    <div className="bg-white p-5 w-fit rounded-md">
     <LineChart
     width={600}
     height={300}

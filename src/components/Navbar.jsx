@@ -25,7 +25,6 @@ const Navbar = ({showSidebar,  handleSidebarToggle}) => {
   }
 
   return (
-    <div className='nav'>
        <div className={`navbar ${showSidebar ? 'navbar_show' : ''}  flex items-center justify-between fixed z-10 top-0 right-0`}>
         <div className="burger flex pl-8 justify-center items-center">
           <RxHamburgerMenu onClick={handleSidebarToggle} className='text-3xl font-bold burger_icon'/>
@@ -50,7 +49,6 @@ const Navbar = ({showSidebar,  handleSidebarToggle}) => {
               </div>
             </div>
         </div>
-    </div>
     </div>
    
   )
