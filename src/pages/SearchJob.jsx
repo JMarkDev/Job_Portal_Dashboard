@@ -60,15 +60,16 @@ const jobs = [
 ]
 
 const SearchJob = () => {
+  
   return (
     <div>
-        <div className="flex justify-between items-center bg-white p-3 py-4 rounded-lg">
+        <div className="flex justify-between items-center bg-white p-3 py-4 rounded-lg gap-5 flex-wrap">
           <div className="flex justify-start items-center">
             <MdLocationOn className="text-primary text-3xl"/>
             <h1 className="font-sans text-lg ml-4">Around You</h1>
           </div>
           <div className="flex justify-between items-center"> 
-            <input className="border border-gray-300 py-2 px-5 w-350 rounded-full text-custom-base" type="text" placeholder="Search by Title, Company or any jobs keywords..." />
+            <input className="border border-gray-300 py-2 px-5 sm:w-350 rounded-full text-custom-base" type="text" placeholder="Search by Title, Company or any jobs keywords..." />
           </div>
           <div className="flex justify-center items-center">
                 <button className="text-sm text-primary flex mr-5 bg-filter-bg py-3 px-5 rounded-full">                
@@ -84,11 +85,13 @@ const SearchJob = () => {
         <div className="mt-3">
           {
             skillsBtn.map((item) => (
-              <button key={item.id} className="bg-skills-bg py-2.5 px-4 border rounded-full text-primary mr-2 mt-2 text-sm">{item.skills}</button>
+              <button key={item.id} className="hover:bg-primary hover:text-white bg-skills-bg py-2.5 px-4 border rounded-full text-primary mr-2 mt-2 text-sm">
+              {item.skills}
+              </button>
             ))
           }
         </div>
-        <div className="job_card mt-10 flex flex-wrap">
+        <div className="job_card mt-10 flex flex-wrap -m-3">
           {
             jobs.map((item) => (
             <div key={item.id} className=" w-full:w-1/4 md:w-1/2 lg:w-1/3">
@@ -99,7 +102,7 @@ const SearchJob = () => {
                   <h2 className="text-lg text-primary">{item.salary}</h2>
                   <p className="text-notfound-p my-5">{item.description}</p>
                   <div className="flex justify-between items-center my-1">
-                    <Link to='/' className="bg-skills-bg py-2.5 px-4 rounded-full text-sm text-primary">{item.setup}</Link>
+                    <Link to='/' className="hover:bg-primary hover:text-white bg-skills-bg py-2.5 px-4 rounded-full text-sm text-primary">{item.setup}</Link>
                     <h2 className="text-lg">{item.location}</h2>
                   </div>
               </div>

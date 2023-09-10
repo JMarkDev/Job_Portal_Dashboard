@@ -18,6 +18,7 @@ export default {
         'notfound-p': '#7e7e7e',
         'filter-bg':'#babbbf',
         'skills-bg': '#dfdbe9',
+        'border_table': '#f0f1f5',
       },
       width: {
         '350': '350px'
