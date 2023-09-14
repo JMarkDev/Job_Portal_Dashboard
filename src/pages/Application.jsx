@@ -110,7 +110,7 @@ const Application = () => {
             <td className='text-sm'>{application.type}</td>
             <td className='text-sm'>{application.position}</td>
             <td className='text-sm'>{application.contact}</td> 
-            <td className='text-sm'>{application.contact}</td>
+            <td className='text-sm'>{application.status}</td>
             <td><BsThreeDotsVertical className='m-auto text-xl'/></td>
           </tr>
         ))}

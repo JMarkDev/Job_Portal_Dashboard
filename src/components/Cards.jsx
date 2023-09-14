@@ -7,7 +7,7 @@ const Cards = () => {
         <div className="card_interviews flex justify-between items-center md:mr-3.5">
           <FaUserAlt className="icon ml-2 md:ml-8 h-10 w-10" />
           <div className="flex flex-col justify-center items-end p-5">
-            <h2 className="text-lg text-white">Interviews</h2>
+            <h2 className="text-lg text-white">Job Category</h2>
             <h1 className="font-bold text-2xl text-white">100</h1>
           </div>
         </div>
@@ -16,7 +16,7 @@ const Cards = () => {
       <div className="card_apply flex justify-between items-center md:ml-3.5 md:mt-0 mt-7">
           <FaUserAlt className="icon ml-2 md:ml-8 h-10 w-10" />
           <div className="flex flex-col justify-center items-end p-5">
-            <h2 className="text-lg text-white">Apply</h2>
+            <h2 className="text-lg text-white">Total Employer</h2>
             <h1 className="font-bold text-2xl text-white">100</h1>
           </div>
         </div>
@@ -25,7 +25,7 @@ const Cards = () => {
         <div className="card_profile flex justify-between items-center md:mr-3.5 mt-7">
           <FaUserAlt className="icon ml-2 md:ml-8 h-10 w-10" />
           <div className="flex flex-col justify-center items-end p-5">
-            <h2 className="text-lg text-white">Profile</h2>
+            <h2 className="text-lg text-white">Total Candidates</h2>
             <h1 className="font-bold text-2xl text-white">100</h1>
           </div>
         </div>
@@ -34,7 +34,7 @@ const Cards = () => {
         <div className="card_message flex justify-between items-center md:ml-3.5 mt-7">
           <FaUserAlt className="icon ml-2 md:ml-8 h-10 w-10" />
           <div className="flex flex-col justify-center items-end p-5">
-            <h2 className="text-lg text-white">Message</h2>
+            <h2 className="text-lg text-white">Total job</h2>
             <h1 className="font-bold text-2xl text-white">100</h1>
           </div>
         </div>

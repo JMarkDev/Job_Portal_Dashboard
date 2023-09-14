@@ -47,16 +47,6 @@ body{
   height: 80px;
 }
 
-/* .nav{
-  width: calc(100% - 270px);
-  background-color: #40189d;
-}
-
-.nav_bg{
-  width: calc(100% - 78px);
-  background-color: #40189d;
-} */
-
 .navbar{
   border-radius: 15px 0 0 0;
   width: calc(100% - 270px);
@@ -130,12 +120,15 @@ li{
   background-color: #8bc740
 }
 
-.error_page{
+.not_found-page{
+  background-color: #dfdbe9;
+}
+
+.fixed_page, .not_found-page{
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
-  background-color: #dfdbe9;
   width: 100vw;
   height: 100vh;
 }

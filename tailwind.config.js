@@ -16,15 +16,25 @@ export default {
         'primary': '#40189d',
         'notfound-color': '#3d4465',
         'notfound-p': '#7e7e7e',
+        'not-found-bg': '##dfdbe9',
         'filter-bg':'#babbbf',
         'skills-bg': '#dfdbe9',
         'border_table': '#f0f1f5',
+        'table-font': '#000',
       },
       width: {
-        '350': '350px'
+        '350': '350px',
+        '400': '400px',
+        '500': '500px'
+      },
+      height:{
+        '600': '600px',
       },
       padding: {
         '30': '30px',
+      },
+      backgroundImage: {
+        'register-bg': "url('./src/assets/img/GettyImages-1309760275-3.jpg')",
       }
     },
   },
