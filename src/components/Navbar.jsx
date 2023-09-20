@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
 const pageTitles = {
-  '/dashboard': 'Dashboard',
+  '/dashboard-admin': 'Dashboard',
   '/application': 'Application',
   '/searchjob': 'Search Job',
   '/companies': 'Companies',

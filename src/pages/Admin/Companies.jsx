@@ -1,5 +1,4 @@
-import lorem from '../assets/img/lorem-ipsum-logo-teamplet-design-template-27e21a1ab02717b60482278b29321db8_screen.jpg'
-import { Link } from 'react-router-dom'
+import lorem from '../../assets/img/lorem-ipsum-logo-teamplet-design-template-27e21a1ab02717b60482278b29321db8_screen.jpg'
 
 const company = [
   {

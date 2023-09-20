@@ -21,20 +21,24 @@ export default {
         'skills-bg': '#dfdbe9',
         'border_table': '#f0f1f5',
         'table-font': '#000',
+        'input_bg': '#eee'
       },
       width: {
+        '100vh': '100vh',
         '350': '350px',
         '400': '400px',
         '500': '500px'
       },
       height:{
+        '100vh': '100vh',
         '600': '600px',
+        '110': '110px',
       },
       padding: {
         '30': '30px',
       },
       backgroundImage: {
-        'register-bg': "url('./src/assets/img/GettyImages-1309760275-3.jpg')",
+        'register-bg': "url('./src/assets/img/bg_purple.jpg')",
       }
     },
   },

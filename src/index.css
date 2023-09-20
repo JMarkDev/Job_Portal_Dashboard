@@ -88,36 +88,12 @@ li{
   transition: all 0.3s ease;
 }
 
-.card_interviews, 
-.card_apply, 
-.card_profile, 
-.card_message{
-  height: 110px;
-  border-radius: 10px;
-}
-
 .icon{
   border: 1px solid #fff;
   color: #fff;
   border-radius: 10px;
   font-size: 15px;
   padding: 8px;
-}
-
-.card_interviews{
-  background-color: #40189d;
-}
-
-.card_apply{
-  background-color: #48a9f8;
-}
-
-.card_profile{
-  background-color: #1bd084
-}
-
-.card_message{
-  background-color: #8bc740
 }
 
 .not_found-page{
@@ -133,4 +109,18 @@ li{
   height: 100vh;
 }
 
+.primary{
+  background-color: #40189d;
+}
+
+.secondary{
+  background-color: #48a9f8;
+}
+
+.tertiary{
+  background-color: #1bd084;
+}
+.quaternary{
+  background-color: #8bc740;
+}
 

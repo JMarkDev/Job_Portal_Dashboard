@@ -10,7 +10,7 @@ const Pagenotfound = () => {
         <p className='text-notfound-p'>
         You may have mistyped the address or the page may have moved.
         </p>
-        <Link to="/dashboard" className='mt-5 text-white bg-primary p-2 px-4 rounded-lg'>Back to Home</Link>
+        <Link to="/dashboard-admin" className='mt-5 text-white bg-primary p-2 px-4 rounded-lg'>Back to Home</Link>
       </div>
     </div>
   )

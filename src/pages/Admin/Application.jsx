@@ -52,6 +52,10 @@ const applicationData = [
 
 const Application = () => {
 
+  const handleStatus = (id) => {
+    console.log(id)
+  }
+
   return (
     <div>
       <div className='flex justify-between lg:items-center flex-wrap'>
@@ -111,7 +115,11 @@ const Application = () => {
             <td className='text-sm'>{application.position}</td>
             <td className='text-sm'>{application.contact}</td> 
             <td className='text-sm'>{application.status}</td>
-            <td><BsThreeDotsVertical className='m-auto text-xl'/></td>
+            <td>
+              <BsThreeDotsVertical className='m-auto text-xl'
+                onClick={() => handleStatus(application.id)}
+              />
+            </td>
           </tr>
         ))}
           

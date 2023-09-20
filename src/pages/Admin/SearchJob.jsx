@@ -2,7 +2,7 @@ import { MdLocationOn } from "react-icons/md";
 import { BiFilter } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import lorem from '../assets/img/lorem-ipsum-logo-teamplet-design-template-27e21a1ab02717b60482278b29321db8_screen.jpg'
+import lorem from '../../assets/img/lorem-ipsum-logo-teamplet-design-template-27e21a1ab02717b60482278b29321db8_screen.jpg'
 
 const skillsBtn = [
   {id: 1, skills: "Suggestions"},
