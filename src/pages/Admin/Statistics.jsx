@@ -1,7 +1,7 @@
 
 const Statistics = () => {
   return (
-    <div>
+    <div className="dashboard">
         <h1 className="text-black">Dashboard</h1>
     </div>
   )

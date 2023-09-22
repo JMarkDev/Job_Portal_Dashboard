@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 const pageTitles = {
   '/admin-dashboard': 'Dashboard',
-  '/admin-searchjob': 'Application',
+  '/admin-application': 'Application',
   '/admin-searchjob': 'Search Job',
   '/admin-companies': 'Companies',
   '/admin-statistics': 'Statistics',

@@ -45,7 +45,7 @@ function App() {
 
       <div className={`content ${showSidebar ? 'content1' : ''}`}>
         <Routes>
-          <Route path='/' element={<Navigate to='/dashboard-admin' />} />
+          <Route path='/' element={<Navigate to='/admin-dashboard' />} />
           <Route path="/register" element={<Register/>} />
           <Route path="/login" element={<Login />}/>
           <Route path="/admin-dashboard" element={<Dashboard />} />

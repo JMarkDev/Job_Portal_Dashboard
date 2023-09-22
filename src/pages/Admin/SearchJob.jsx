@@ -62,7 +62,7 @@ const jobs = [
 const SearchJob = () => {
   
   return (
-    <div>
+    <div className='dashboard'>
         <div className="flex justify-between items-center bg-white p-3 py-4 rounded-lg gap-5 flex-wrap">
           <div className="flex justify-start items-center">
             <MdLocationOn className="text-primary text-3xl"/>

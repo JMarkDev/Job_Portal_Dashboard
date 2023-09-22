@@ -57,7 +57,7 @@ const Application = () => {
   }
 
   return (
-    <div>
+    <div className='dashboard'>
       <div className='flex justify-between lg:items-center flex-wrap'>
         <div className='pr-20'>
           <h1 className='font-bold font-sans'>Showing 45 Applicants</h1>
@@ -106,7 +106,7 @@ const Application = () => {
         </thead>
         <tbody className='text-center'>
         {applicationData.map((application) => (
-          <tr key={application.id} className='border-b border-b-border_table'>
+          <tr key={application.id} className='border-b text-table-color border-b-border_table'>
             <td className='p-5'><input type='checkbox' className='w-5 h-5'/></td>
             <td className='text-sm'>{application.id}</td>
             <td className='text-sm'>{application.date_applied}</td>

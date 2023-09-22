@@ -11,6 +11,57 @@ const DashboardApplicant = () => {
     { name: 'Review CV', value: 100, bgColor: 'quaternary' },
   ];
 
+  const jobData = [
+    { 
+      id: 1,
+      jobTitle: 'Web Developer',
+      location: 'New-York, USA',
+      salary: '$60-$90',
+      appliedDate: '12/12/2021',
+      company: 'Google',
+      status: 'Viewed',
+    },
+    { 
+      id: 2,
+      jobTitle: 'Software Engineer',
+      location: 'New-York, USA',
+      salary: '$60-$90',
+      appliedDate: '12/12/2021',
+      company: 'Amazon',
+      status: 'Success',
+    },
+    { 
+      id: 3,
+      jobTitle: 'Software Developer',
+      location: 'New-York, USA',
+      salary: '$60-$90',
+      appliedDate: '12/12/2021',
+      company: 'Google',
+      status: 'Interview',
+    },
+    { 
+      id: 4,
+      jobTitle: 'Web Developer',
+      location: 'New-York, USA',
+      salary: '$60-$90',
+      appliedDate: '12/12/2021',
+      company: 'Google',
+      status: 'Cancelled',
+    },
+  ]
+
+  const statusData = jobData.map((job) => {
+      if (job.status === 'Viewed') {
+        return 'primary';
+      } else if (job.status === 'Success') {
+        return 'secondary';
+      } else if (job.status === 'Interview') {
+        return 'tertiary';
+      } else {
+        return 'cancel';
+      }
+})
+
   return (
     <>
       <div className='fixed_page bg-applicant'>
@@ -31,8 +82,8 @@ const DashboardApplicant = () => {
               <div>
                 <h1 className='text-lg mt-10 mb-4'>Current Applied Jobs:</h1>
                 <table className='w-full border-collapse'>
-                  <thead>
-                    <tr className='text-left bg-gray-200'>
+                  <thead >
+                    <tr className='text-center bg-gray-200'>
                       <th className='px-4 py-2'>Job Title</th>
                       <th className='px-4 py-2'>Apply Date</th>
                       <th className='px-4 py-2'>Company</th>
@@ -41,28 +92,21 @@ const DashboardApplicant = () => {
                   </thead>
                   
                   <tbody>
-                    <tr className='text-left border-b border-b-border_table'>
-                      <td className='px-4 py-2'>
-                        <h1 className='text-lg font-bold'>Web Developer</h1>
-                        <p>New-York, USA<br />Salary: $60-$90 / Per Hour</p>
-                      </td>
-                      <td className='px-4 py-2'>12/12/2021</td>
-                      <td className='px-4 py-2'>Google</td>
-                      <td className='px-4 py-2 '>
-                        <span className='text-white bg-primary p-2 px-5 text-sm rounded'>Applied</span>
-                      </td>
-                    </tr>
-                    <tr className='text-left border-b border-b-border_table'>
-                      <td className='px-4 py-2'>
-                        <h1 className='text-lg font-bold'>Web Developer</h1>
-                        <p className='text-gray'>New-York, USA<br />Salary: $60-$90 / Per Hour</p>
-                      </td>
-                      <td className='px-4 py-2'>12/12/2021</td>
-                      <td className='px-4 py-2'>Google</td>
-                      <td className='px-4 py-2 '>
-                        <span className='text-white bg-primary p-2 px-5 text-sm rounded'>Applied</span>
-                      </td>
-                    </tr>
+
+                  { jobData.map((job) => (
+                    <tr key={job.id} className='text-table-color text-center border-b-2 border-b-table-border'>
+                    <td className='px-4 py-2'>
+                      <h1 className='text-left text-lg font-bold'>{job.jobTitle}</h1>
+                      <p className='text-left'>{job.location}</p>
+                      <p className='text-left'>Salary: <span className='font-bold'>{job.salary}</span> / Per Hour</p>
+                    </td>
+                    <td className='px-4 py-2'>{job.appliedDate}</td>
+                    <td className='px-4 py-2'>{job.company}</td>
+                    <td className='px-4 py-2 '>
+                      <p className={`text-white ${statusData[job.id - 1]} p-2 text-sm rounded`}>{job.status}</p>
+                    </td>
+                  </tr>
+                  ))}
                   </tbody>
                 </table>
               </div>

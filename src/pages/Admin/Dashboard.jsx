@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   return (
     <>
-    <div>
+    <div className='dashboard'>
         <Cards cardValues={cardValues}/>
         <Chart />
     </div>

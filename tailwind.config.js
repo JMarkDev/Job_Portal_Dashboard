@@ -22,7 +22,9 @@ export default {
         'border_table': '#f0f1f5',
         'table-font': '#000',
         'input_bg': '#eee',
-        'applicant': '#f8f8f8'
+        'applicant': '#f8f8f8',
+        'table-color': '#333',
+        'table-border': '#ccc',
       },
       width: {
         '100vh': '100vh',
@@ -32,6 +34,7 @@ export default {
         '250': '250px',
       },
       height:{
+        '100%': '100%',
         '100vh': '100vh',
         '600': '600px',
         '110': '110px',
@@ -40,9 +43,12 @@ export default {
       padding: {
         '30': '30px',
       },
+      margin: {
+        '80': '80px',
+      },
       backgroundImage: {
         'register-bg': "url('./src/assets/img/bg_purple.jpg')",
-      }
+      },
     },
   },
   plugins: [],

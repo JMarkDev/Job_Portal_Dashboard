@@ -35,7 +35,7 @@ const company = [
 
 const Companies = () => {
   return (
-    <div>
+    <div className='dashboard'>
     <div className="job_card flex flex-wrap -m-3">
     {
       company.map((item) => (
