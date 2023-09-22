@@ -1,18 +1,16 @@
 import React from 'react'
 import ApplicantSidebar from '../../components/ApplicantSidebar'
-
-const AppliedJobs = () => {
+const ApplicantSettings = () => {
   return (
     <div className='fixed_page bg-applicant'>
         <div className='flex'>
         <ApplicantSidebar />
         <div>
-          <h1>Applied Jobs</h1>
+          <h1>Settings</h1>
         </div>
       </div>
     </div>
-    
   )
 }
 
-export default AppliedJobs 
+export default ApplicantSettings

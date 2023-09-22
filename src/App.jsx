@@ -14,18 +14,18 @@ import Login from './pages/Admin/Login';
 import AppliedJobs from './pages/Applicant/AppliedJobs';
 import Profile from './pages/Applicant/Profile';
 import DashboardApplicant from './pages/Applicant/DashboardApplicant';
-
+import ApplicantSettings from './pages/Applicant/ApplicantSettings';
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
   const location = useLocation();
   const validPath = [
-    '/dashboard-admin',
-    '/application',
-    '/searchjob',
-    '/companies',
-    '/statistics',
-    '/settings'
+    '/admin-dashboard',
+    '/admin-application',
+    '/admin-searchjob',
+    '/admin-companies',
+    '/admin-statistics',
+    '/admin-settings'
   ];
 
   const handleSidebarToggle = () => {
@@ -45,21 +45,20 @@ function App() {
 
       <div className={`content ${showSidebar ? 'content1' : ''}`}>
         <Routes>
-          <Route path='/' element={<Navigate to='/dashboard' />} />
+          <Route path='/' element={<Navigate to='/dashboard-admin' />} />
           <Route path="/register" element={<Register/>} />
           <Route path="/login" element={<Login />}/>
-          <Route path="/dashboard-admin" element={<Dashboard />} />
-          <Route path="/application" element={<Application />} />
-          <Route path="/searchjob" element={<SearchJob />} />
-          <Route path="/companies" element={<Companies />} />
-          <Route path="/statistics" element={<Statistics />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/admin-dashboard" element={<Dashboard />} />
+          <Route path="/admin-application" element={<Application />} />
+          <Route path="/admin-searchjob" element={<SearchJob />} />
+          <Route path="/admin-companies" element={<Companies />} />
+          <Route path="/admin-statistics" element={<Statistics />} />
+          <Route path="/admin-settings" element={<Settings />} />
 
-          <Route path='/dashboard-applicant' element={<DashboardApplicant/>} />
-          <Route path="/applied-jobs" element={<AppliedJobs />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/" element={<Application />} />
+          <Route path='/applicant-dashboard' element={<DashboardApplicant/>} />
+          <Route path="/applicant-applied-jobs" element={<AppliedJobs />} />
+          <Route path="/applicant-profile" element={<Profile />} />
+          <Route path="/applicant-settings" element={<ApplicantSettings />} />
 
           <Route path="*" element={<Pagenotfound />} />
         </Routes>

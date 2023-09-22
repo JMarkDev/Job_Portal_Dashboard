@@ -21,18 +21,21 @@ export default {
         'skills-bg': '#dfdbe9',
         'border_table': '#f0f1f5',
         'table-font': '#000',
-        'input_bg': '#eee'
+        'input_bg': '#eee',
+        'applicant': '#f8f8f8'
       },
       width: {
         '100vh': '100vh',
         '350': '350px',
         '400': '400px',
-        '500': '500px'
+        '500': '500px',
+        '250': '250px',
       },
       height:{
         '100vh': '100vh',
         '600': '600px',
         '110': '110px',
+        '450': '450px'
       },
       padding: {
         '30': '30px',

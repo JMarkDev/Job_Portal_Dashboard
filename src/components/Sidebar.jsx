@@ -12,12 +12,12 @@ const Sidebar = ({ showSidebar }) => {
 
   const sidebarClasses = `sidebar flex ${showSidebar ? 'hide-links' : ''} items-center flex-col`;
   const sidebarIcons = [
-    { icon: <BiSolidDashboard />, text: 'Dashboard', link: '/dashboard-admin' },
-    { icon: <BsSearch />, text: 'Search Job', link: '/searchjob' },
-    { icon: <BsFillBuildingFill />, text: 'Companies', link: '/companies' },
-    { icon: <IoExtensionPuzzle />, text: 'Application', link: '/application' },
-    { icon: <AiFillPieChart />, text: 'Statistics', link: '/statistics' },
-    { icon: <AiFillSetting />, text: 'Settings', link: '/settings' },
+    { icon: <BiSolidDashboard />, text: 'Dashboard', link: '/admin-dashboard' },
+    { icon: <BsSearch />, text: 'Search Job', link: '/admin-searchjob' },
+    { icon: <BsFillBuildingFill />, text: 'Companies', link: 'admin-companies' },
+    { icon: <IoExtensionPuzzle />, text: 'Application', link: '/admin-application' },
+    { icon: <AiFillPieChart />, text: 'Statistics', link: '/admin-statistics' },
+    { icon: <AiFillSetting />, text: 'Settings', link: '/admin-settings' },
     { icon: <BiLogOut />, text: 'Logout', link: '/login' },
   ];
 
@@ -27,7 +27,7 @@ const Sidebar = ({ showSidebar }) => {
         <h1 className="text-4xl text-center pt-4 font-serif text-white font-semibold">JobHunt</h1>
         <ul className="pt-10 text-lg text-white flex flex-col justify-start items-start">
           {sidebarIcons.map((item, index) => (
-            <li className="flex justify-center items-center p-3" key={index}>
+            <li className="p-3" key={index}>
               <Link to={item.link} className="flex items-center hover:text-white gap-3">
                 <span className='text-2xl'>{item.icon}</span>
                 {item.text}

@@ -4,7 +4,7 @@ const Cards = ({ cardValues }) => {
   return (
     <div className="flex flex-wrap justify-center items-center mb-5 -mt-3 -mx-3">
       {cardValues.map((item, index) => (
-        <div key={index} className="w-full md:w-1/2 lg:w-1/2 ">
+        <div key={index} className="w-full md:w-1/2 lg:w-1/2">
           <div 
             className={`rounded-lg ${item.bgColor} mx-3.5 my-3 py-3 flex justify-between items-center`}>
             <FaUserAlt className="icon ml-2 md:ml-8 h-10 w-10" />
