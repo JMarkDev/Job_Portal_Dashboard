@@ -25,10 +25,10 @@ const Sidebar = ({ showSidebar }) => {
     <div className="fixed">
       <div className={sidebarClasses}>
         <h1 className="text-4xl text-center pt-4 font-serif text-white font-semibold">JobHunt</h1>
-        <ul className="pt-10 text-lg text-white flex flex-col justify-start items-start">
+        <ul className="pt-10 text-lg text-white flex flex-col">
           {sidebarIcons.map((item, index) => (
-            <li className="p-3" key={index}>
-              <Link to={item.link} className="flex items-center hover:text-white gap-3">
+            <li key={index}>
+              <Link to={item.link} className="pl-10 p-3 w-250 flex items-center hover:text-white gap-3">
                 <span className='text-2xl'>{item.icon}</span>
                 {item.text}
               </Link>
