@@ -4,6 +4,7 @@ import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { FiEye } from "react-icons/fi";
 import axios from "axios";
 import { useUpdateAuthContext } from "../context/authContext";
+
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState({});
@@ -29,11 +30,17 @@ const Login = () => {
             if (response.status == 200) {
                 const user = response.data?.user;
                 const accessToken = response.data?.accessToken;
+                console.log(user);
                 if (user && accessToken) {
                     localStorage.setItem("email", user?.email);
                     localStorage.setItem("current_user", JSON.stringify(user));
                     handleAuth({ user, accessToken });
-                    navigate("/", { replace: true });
+
+                    if (user?.role === "applicant") {
+                        navigate("/applicant-dashboard", { replace: true });
+                    } else {
+                        navigate("/admin-dashboard", { replace: true });
+                    }
                 }
                 setError({});
                 setMessage([]);

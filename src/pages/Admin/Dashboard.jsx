@@ -1,25 +1,32 @@
-import axios from "axios";
 import Cards from "../../components/Cards";
 import Chart from "../../components/Chart";
-import { useAuthContext } from "../../context/authContext";
-import { useEffect } from "react";
+import useAdminDashboard from "../../hooks/useAdminDashboard";
 
 const Dashboard = () => {
-    const auth = useAuthContext();
-
+    const { isLoading, data } = useAdminDashboard();
     const cardValues = [
-        { name: "Job Category", value: 100, bgColor: "primary" },
-        { name: "Total Employer", value: 100, bgColor: "secondary" },
-        { name: "Total Candidates", value: 100, bgColor: "tertiary" },
-        { name: "Total job", value: 100, bgColor: "quaternary" },
+        {
+            name: "Total Employer",
+            value: data?.total?.employeers,
+            bgColor: "secondary",
+        },
+        {
+            name: "Total Candidates",
+            value: data?.total?.applicants,
+            bgColor: "tertiary",
+        },
+        { name: "Total job", value: data?.total?.jobs, bgColor: "quaternary" },
     ];
 
     return (
         <>
-            <div className="dashboard">
-                <Cards cardValues={cardValues} />
-                {/* <Chart /> */}
-            </div>
+            {isLoading ? (
+                <div>Loading...</div>
+            ) : (
+                <div className="dashboard">
+                    <Cards cardValues={cardValues} />
+                </div>
+            )}
         </>
     );
 };

@@ -140,9 +140,9 @@ const Register = () => {
                     <span className="footer__text text-sm  mr-3">
                         Already have an account?
                     </span>
-                    {/* <Link to="/login" className="signup__link text-primary">
+                    <Link to="/login" className="signup__link text-primary">
                         Log In
-                    </Link> */}
+                    </Link>
                 </div>
             </div>
         </div>
