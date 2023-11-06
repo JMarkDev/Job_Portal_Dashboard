@@ -1,7 +1,5 @@
 import axios from "axios";
-
 import { useUpdateAuthContext } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
 
 function useRefreshToken() {
     const handleAuth = useUpdateAuthContext();

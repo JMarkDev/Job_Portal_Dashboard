@@ -10,6 +10,7 @@ function PersistLogin() {
     const auth = useAuthContext();
     const navigate = useNavigate();
     useEffect(() => {
+        let isMounted = true;
         const verifyRefreshToken = async () => {
             try {
                 await refresh();
@@ -18,11 +19,15 @@ function PersistLogin() {
                     navigate("/not-found");
                 }
             } finally {
-                setIsLoading(false);
+                isMounted && setIsLoading(false);
             }
         };
         !auth?.accessToken ? verifyRefreshToken() : setIsLoading(false);
-    }, [isLoading]);
+
+        return () => {
+            isMounted = false;
+        };
+    }, []);
 
     return (
         <>

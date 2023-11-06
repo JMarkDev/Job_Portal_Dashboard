@@ -38,81 +38,88 @@ function App() {
 
     return (
         <>
-            <AuthProvider>
-                {validPath.includes(location.pathname) && (
-                    <>
-                        <Navbar
-                            showSidebar={showSidebar}
-                            handleSidebarToggle={handleSidebarToggle}
-                        />
-                        <Sidebar showSidebar={showSidebar} />
-                    </>
-                )}
+            {validPath.includes(location.pathname) && (
+                <>
+                    <Navbar
+                        showSidebar={showSidebar}
+                        handleSidebarToggle={handleSidebarToggle}
+                    />
+                    <Sidebar showSidebar={showSidebar} />
+                </>
+            )}
 
-                <div className={`content ${showSidebar ? "content1" : ""}`}>
-                    <Routes>
-                        <Route path="/register" element={<Register />} />
+            <div className={`content ${showSidebar ? "content1" : ""}`}>
+                <Routes>
+                    <Route path="/register" element={<Register />} />
 
-                        <Route path="/login" element={<Login />} />
+                    <Route path="/login" element={<Login />} />
 
-                        <Route element={<PersistLogin />}>
+                    <Route element={<PersistLogin />}>
+                        <Route
+                            element={
+                                <ProtectedRoutes allowedRoles={["admin"]} />
+                            }
+                        >
                             <Route
-                                element={
-                                    <ProtectedRoutes allowedRoles={["admin"]} />
-                                }
-                            >
-                                <Route
-                                    path="/"
-                                    element={<Navigate to="/admin-dashboard" />}
-                                />
-                                <Route
-                                    path="/admin-dashboard"
-                                    element={<Dashboard />}
-                                />
-                                <Route
-                                    path="/admin-application"
-                                    element={<Application />}
-                                />
-                                <Route
-                                    path="/admin-searchjob"
-                                    element={<SearchJob />}
-                                />
-                                <Route
-                                    path="/admin-companies"
-                                    element={<Companies />}
-                                />
-                                <Route
-                                    path="/admin-statistics"
-                                    element={<Statistics />}
-                                />
-                                <Route
-                                    path="/admin-settings"
-                                    element={<Settings />}
-                                />
-                            </Route>
+                                path="/"
+                                element={<Navigate to="/admin-dashboard" />}
+                            />
+                            <Route
+                                path="/admin-dashboard"
+                                element={<Dashboard />}
+                            />
+                            <Route
+                                path="/admin-application"
+                                element={<Application />}
+                            />
+                            <Route
+                                path="/admin-searchjob"
+                                element={<SearchJob />}
+                            />
+                            <Route
+                                path="/admin-companies"
+                                element={<Companies />}
+                            />
+                            <Route
+                                path="/admin-statistics"
+                                element={<Statistics />}
+                            />
+                            <Route
+                                path="/admin-settings"
+                                element={<Settings />}
+                            />
                         </Route>
+                        <Route
+                            element={
+                                <ProtectedRoutes allowedRoles={["applicant"]} />
+                            }
+                        >
+                            <Route
+                                path="/"
+                                element={<Navigate to="/applicant-dashboard" />}
+                            />
+                            <Route
+                                path="/applicant-dashboard"
+                                element={<DashboardApplicant />}
+                            />
+                            <Route
+                                path="/applicant-applied-jobs"
+                                element={<AppliedJobs />}
+                            />
+                            <Route
+                                path="/applicant-profile"
+                                element={<Profile />}
+                            />
+                            <Route
+                                path="/applicant-settings"
+                                element={<ApplicantSettings />}
+                            />
+                        </Route>
+                    </Route>
 
-                        <Route
-                            path="/applicant-dashboard"
-                            element={<DashboardApplicant />}
-                        />
-                        <Route
-                            path="/applicant-applied-jobs"
-                            element={<AppliedJobs />}
-                        />
-                        <Route
-                            path="/applicant-profile"
-                            element={<Profile />}
-                        />
-                        <Route
-                            path="/applicant-settings"
-                            element={<ApplicantSettings />}
-                        />
-
-                        <Route path="*" element={<Pagenotfound />} />
-                    </Routes>
-                </div>
-            </AuthProvider>
+                    <Route path="*" element={<Pagenotfound />} />
+                </Routes>
+            </div>
         </>
     );
 }
