@@ -15,9 +15,9 @@ import AppliedJobs from "./pages/Applicant/AppliedJobs";
 import Profile from "./pages/Applicant/Profile";
 import DashboardApplicant from "./pages/Applicant/DashboardApplicant";
 import ApplicantSettings from "./pages/Applicant/ApplicantSettings";
-import { AuthProvider } from "./context/authContext";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import PersistLogin from "./components/PersistLogin";
+import RegisterAdmin from "./pages/Admin/RegisterAdmin";
 
 function App() {
     const [showSidebar, setShowSidebar] = useState(false);
@@ -61,9 +61,9 @@ function App() {
                             }
                         >
                             <Route
-                                path="/"
-                                element={<Navigate to="/admin-dashboard" />}
-                            />
+                                path="/register-admin"
+                                element={<RegisterAdmin />}
+                            ></Route>
                             <Route
                                 path="/admin-dashboard"
                                 element={<Dashboard />}
@@ -94,10 +94,6 @@ function App() {
                                 <ProtectedRoutes allowedRoles={["applicant"]} />
                             }
                         >
-                            <Route
-                                path="/"
-                                element={<Navigate to="/applicant-dashboard" />}
-                            />
                             <Route
                                 path="/applicant-dashboard"
                                 element={<DashboardApplicant />}
