@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { BsSearch, BsFillBuildingFill } from "react-icons/bs";
+import { BsSearch, BsFillBuildingFill, BsPersonFillAdd } from "react-icons/bs";
 import { BiSolidDashboard, BiLogOut } from "react-icons/bi";
 import { IoExtensionPuzzle } from "react-icons/io5";
 import { AiFillPieChart, AiFillSetting } from "react-icons/ai";
@@ -21,6 +21,11 @@ const Sidebar = ({ showSidebar }) => {
             icon: <BiSolidDashboard />,
             text: "Dashboard",
             link: "/admin-dashboard",
+        },
+        {
+            icon: <BsPersonFillAdd />,
+            text: "Add Admin",
+            link: "/register-admin",
         },
         { icon: <BsSearch />, text: "Search Job", link: "/admin-searchjob" },
         {
@@ -91,40 +96,28 @@ const Sidebar = ({ showSidebar }) => {
                         JH
                     </h1>
                     <ul className="pt-10 text-lg text-white flex flex-col justify-center items-center">
-                        {sidebarIcons.map(
-                            (item, index) =>
-                                item.text === "Logout" ? (
-                                    <li
-                                        className="flex justify-center items-center p-4"
-                                        key={index}
-                                        onClick={userLogout}
+                        {sidebarIcons.map((item, index) =>
+                            item.text === "Logout" ? (
+                                <li
+                                    className="flex justify-center items-center p-4"
+                                    key={index}
+                                    onClick={userLogout}
+                                >
+                                    {item.icon}
+                                </li>
+                            ) : (
+                                <li
+                                    className="flex justify-center items-center p-4"
+                                    key={index}
+                                >
+                                    <Link
+                                        to={item.link}
+                                        className="flex items-center hover:text-white"
                                     >
                                         {item.icon}
-                                    </li>
-                                ) : (
-                                    <li
-                                        className="flex justify-center items-center p-4"
-                                        key={index}
-                                    >
-                                        <Link
-                                            to={item.link}
-                                            className="flex items-center hover:text-white"
-                                        >
-                                            {item.icon}
-                                        </Link>
-                                    </li>
-                                )
-                            // <li
-                            //     className="flex justify-center items-center p-4"
-                            //     key={index}
-                            // >
-                            //     <Link
-                            //         to={item.link}
-                            //         className="flex items-center hover:text-white"
-                            //     >
-                            //         {item.icon}
-                            //     </Link>
-                            // </li>
+                                    </Link>
+                                </li>
+                            )
                         )}
                     </ul>
                 </div>
