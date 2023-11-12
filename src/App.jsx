@@ -18,6 +18,7 @@ import ApplicantSettings from "./pages/Applicant/ApplicantSettings";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import PersistLogin from "./components/PersistLogin";
 import RegisterAdmin from "./pages/Admin/RegisterAdmin";
+import RegisterEmployer from "./pages/Admin/RegisterEmployer";
 
 function App() {
     const [showSidebar, setShowSidebar] = useState(false);
@@ -63,6 +64,10 @@ function App() {
                             <Route
                                 path="/register-admin"
                                 element={<RegisterAdmin />}
+                            ></Route>
+                            <Route
+                                path="/register-employer"
+                                element={<RegisterEmployer />}
                             ></Route>
                             <Route
                                 path="/admin-dashboard"

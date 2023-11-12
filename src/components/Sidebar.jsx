@@ -27,6 +27,12 @@ const Sidebar = ({ showSidebar }) => {
             text: "Add Admin",
             link: "/register-admin",
         },
+
+        {
+            icon: <BsPersonFillAdd />,
+            text: "Add Employer",
+            link: "/register-employer",
+        },
         { icon: <BsSearch />, text: "Search Job", link: "/admin-searchjob" },
         {
             icon: <BsFillBuildingFill />,
